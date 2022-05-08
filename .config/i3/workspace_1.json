@@ -1,0 +1,39 @@
+{
+  "layout": "splith",
+  "nodes": [
+    {
+      "layout": "splith",
+      "nodes": [
+        {
+          "swallows": [
+            {
+              "class": "^konsole$",
+              "instance": "^konsole$"
+            }
+          ]
+        },
+        {
+          "layout": "splitv",
+          "nodes": [
+            {
+              "swallows": [
+                {
+                  "class": "^konsole$",
+                  "instance": "^konsole$"
+                }
+              ]
+            },
+            {
+              "swallows": [
+                {
+                  "class": "^Typora$",
+                  "instance": "^typora$"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

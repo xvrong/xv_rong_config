@@ -1,0 +1,8 @@
+{
+  "swallows": [
+    {
+      "class": "^Microsoft\\-edge\\-dev$",
+      "instance": "^microsoft\\-edge\\-dev$"
+    }
+  ]
+}
