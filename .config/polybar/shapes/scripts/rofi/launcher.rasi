@@ -28,7 +28,7 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  12px;
-	width:							350px;
+	width:							400px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -48,7 +48,7 @@ entry {
     placeholder-color:              #FFFFFF;
     expand:                         true;
     horizontal-align:               0;
-    placeholder:                    "Search...";
+    placeholder:                    "Choose...";
     padding:                        10px;
     border-radius:                  0px 12px 12px 0px;
     blink:                          true;
