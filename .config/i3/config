@@ -39,7 +39,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec konsole -e fish 
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -201,17 +201,17 @@ exec_always --no-startup-id "$HOME/.config/polybar/$polybar_theme/scripts/pywal.
 
 ## 工作区2
 exec --no-startup-id "i3-msg 'workspace 2:web; append_layout ~/.config/i3/workspace_2.json'" 
-exec --no-startup-id "i3-msg 'workspace 2:web; exec microsoft-edge-dev'"
+exec --no-startup-id "i3-msg 'workspace 2:web; exec --no-startup-id microsoft-edge-dev'"
 
 ## 工作区3
 exec --no-startup-id "i3-msg 'workspace 3:code; append_layout ~/.config/i3/workspace_3.json'" 
-exec --no-startup-id "i3-msg 'workspace 3:code; exec code'"
+exec --no-startup-id "i3-msg 'workspace 3:code; exec --no-startup-id code'"
 
 ## 工作区1
 exec --no-startup-id "i3-msg 'workspace 1:main; append_layout ~/.config/i3/workspace_1.json'" 
-exec --no-startup-id "i3-msg 'workspace 1:main; exec konsole -e fish'"
-exec --no-startup-id "i3-msg 'workspace 1:main; exec konsole -e fish'"
-exec --no-startup-id "i3-msg 'workspace 1:main; exec typora'"
+exec --no-startup-id "i3-msg 'workspace 1:main; exec --no-startup-id alacritty'"
+exec --no-startup-id "i3-msg 'workspace 1:main; exec --no-startup-id alacritty'"
+exec --no-startup-id "i3-msg 'workspace 1:main; exec --no-startup-id typora'"
 
 # 工作区
 ## 绑定工作区和屏幕
@@ -239,7 +239,7 @@ exec --no-startup-id copyq
 bindsym $mod+c exec --no-startup-id copyq show
 
 # rofi快捷键
-bindcode $mod+40 exec $HOME/.config/polybar/$polybar_theme/scripts/launcher.sh
+bindcode $mod+40 exec --no-startup-id $HOME/.config/polybar/$polybar_theme/scripts/launcher.sh
 
 # overview
 exec --no-startup-id i3-overview
@@ -248,10 +248,14 @@ for_window [class="i3-overview"] sticky enable
 no_focus [class="i3-overview"]
 
 # 锁屏
-bindsym $mod+shift+x exec betterlockscreen -l
+bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l
 
-# 绑定网络管理器 TODO 无法输入
-bindsym $mod+i exec networkmanager_dmenu 
+# 绑定网络管理器 
+bindsym $mod+i exec --no-startup-id networkmanager_dmenu 
+
+# 蓝牙
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
 
 # 打开vscode 编辑配置文件
 bindsym $mod+Shift+i exec --no-startup-id GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.myconfig_git code $HOME
+

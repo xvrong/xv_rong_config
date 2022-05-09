@@ -7,8 +7,8 @@
         {
           "swallows": [
             {
-              "class": "^konsole$",
-              "instance": "^konsole$"
+              "class": "^Alacritty$",
+              "instance": "^Alacritty$"
             }
           ]
         },
@@ -18,8 +18,8 @@
             {
               "swallows": [
                 {
-                  "class": "^konsole$",
-                  "instance": "^konsole$"
+                  "class": "^Alacritty$",
+                  "instance": "^Alacritty$"
                 }
               ]
             },
