@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # 设置超键
-set $mod Mod1
+set $mod Mod4
 
 # 设置polybar主题
 set $polybar_theme shapes
@@ -197,7 +197,7 @@ for_window [class="copyq"] floating enable border pixel 1
 
 # 多屏幕设置
 ## 设置屏幕相对位置
-exec --no-startup-id xrandr --output HDMI-0 --auto --left-of eDP-1-1
+exec_always --no-startup-id xrandr --output HDMI-0 --auto --left-of eDP-1-1
 
 # 设置壁纸 并 自启动polybar 
 exec_always --no-startup-id "$HOME/.config/polybar/$polybar_theme/scripts/pywal.sh $HOME/Pictures/WallPapers"
